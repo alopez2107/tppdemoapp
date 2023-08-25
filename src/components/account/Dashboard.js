@@ -6,9 +6,7 @@ import "./Dashboard.css";
 import AccountsList from "./AccountsList";
 
 function Dashboard(props) {
-    
-
-  return (
+    return (
     <Card className="dashboard-main">
         <AccountsList/>
     </Card>
