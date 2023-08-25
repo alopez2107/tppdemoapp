@@ -37,18 +37,22 @@ export const AuthContextProvider = (props) => {
     }
 
     function setEmailWrapper(mail) {
+        console.log(`Setting Email to: ${mail}`);
         setEmail(mail);
     }
 
     function setUsernameWrapper(uName) {
+        console.log(`Setting Username to: ${uName}`);
         setUsername(uName);
     }
 
     function setTenantIDWrapper(tenantID) {
+        console.log(`Setting Tenant ID to: ${tenantID}`);
         setTenantID(tenantID);
     }
 
     function setResourceUrlWrapper(resourceUrl) {
+        console.log(`Setting Resource URL to: ${resourceUrl}`);
         setResourceUrl(resourceUrl);
     }
 
