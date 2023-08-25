@@ -5,18 +5,9 @@ import Account from "./Account";
 function Accounts(props) {
     return (
         <Card className="accounts-header">
-            {props.accounts.length > 0 ? () => {
-                props.accounts.map((account) => {
-                    <Account account={account}/>
-                });
-            }:(
-               <div>
-                
-               </div> 
-            )}
+            {props.accounts.map(acct => <Account account={acct}/>)}
         </Card>
     );
-
 }
 
 export default Accounts;

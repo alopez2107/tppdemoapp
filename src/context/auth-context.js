@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FRUser } from "@forgerock/javascript-sdk";
 
 
+
 const AuthContext = React.createContext(
     {
         isAuthenticated: false,
@@ -24,6 +25,7 @@ export const AuthContextProvider = (props) => {
     const [tenantID, setTenantID] = useState('');
     const [resourceUrl, setResourceUrl] = useState('');
 
+
     async function setAuthenticationWrapper(value) {
         if (!value) {
             try {
@@ -32,6 +34,7 @@ export const AuthContextProvider = (props) => {
             catch(err) {
                 console.error(`Error: logout did not successfully complete; ${err}`);
             }  
+            
         }
         setIsLoggedIn(value);
     }

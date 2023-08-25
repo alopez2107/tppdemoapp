@@ -28,7 +28,6 @@ const Account = (props) => {
         </Card>
       </Card>
     );
-    
   }
   
     return (
