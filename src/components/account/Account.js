@@ -8,6 +8,7 @@ const Account = (props) => {
   useState(props.account.title);
 
   function RenderContent(props) {
+    console.log(`Account info: Number: ${props.account.accountNumber} Description: ${props.account.description}`);
 
     return (
       <Card className="account-item">

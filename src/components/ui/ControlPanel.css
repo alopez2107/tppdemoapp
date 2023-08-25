@@ -1,0 +1,9 @@
+.control-panel__main {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 1rem;
+    background-color: #ffffff;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+}

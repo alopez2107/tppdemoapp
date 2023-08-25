@@ -19,10 +19,10 @@ const AuthContext = React.createContext(
 
 export const AuthContextProvider = (props) => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [email, setEmail] = useState(null);
-    const [username, setUsername] = useState(null);
-    const [tenantID, setTenantID] = useState(null);
-    const [resourceUrl, setResourceUrl] = useState(null);
+    const [email, setEmail] = useState('');
+    const [username, setUsername] = useState('');
+    const [tenantID, setTenantID] = useState('');
+    const [resourceUrl, setResourceUrl] = useState('');
 
     async function setAuthenticationWrapper(value) {
         if (!value) {
@@ -68,7 +68,8 @@ export const AuthContextProvider = (props) => {
             setUsername: setUsernameWrapper,
             setTenantID: setTenantIDWrapper,
             setResourceUrl: setResourceUrlWrapper
-        }}>{props.children}</AuthContext.Provider>
+        }}>{props.children}
+        </AuthContext.Provider>
     );
 }
 

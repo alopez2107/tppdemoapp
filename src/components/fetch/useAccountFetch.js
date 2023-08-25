@@ -1,9 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import sendHTTPRequest from "../../services/Utils";
 
 export default function useAccountFetch(dispatch, setFetched, state) {
-
+    const [params] = useState(state);
     useEffect(() => {
         async function getAccounts() {
             const fetchedAccounts = await sendHTTPRequest(state.tenantID, state.resourceUrl, "POST", { email: state.email });
@@ -11,6 +11,6 @@ export default function useAccountFetch(dispatch, setFetched, state) {
             dispatch({type: "init-accts", payload: {accts: fetchedAccounts.result}});
         }
         getAccounts();
-    }, []);
+    }, [params]);
 
 }

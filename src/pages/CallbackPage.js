@@ -85,7 +85,7 @@ function CallbackPage() {
       navigate(`/aisp/${params.id}`);
     }
     getTokens();
-  });
+  }, []);
     
    return (
     <Card>
