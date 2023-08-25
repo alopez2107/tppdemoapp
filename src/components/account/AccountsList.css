@@ -1,0 +1,30 @@
+.accounts-list__main {
+    padding: 1rem;
+    background-color: #ffffff;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+}
+
+.accounts-list__header {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 1rem;
+    background-color: #e6e6e6;
+    margin: 3rem auto;
+    max-width: 80%;
+    color: #00004d;
+}
+
+.accounts-list__header h2 {
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.accounts-list__header p {
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    color: #808080;
+}

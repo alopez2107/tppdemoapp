@@ -1,0 +1,7 @@
+.main-content {
+    background: #ffffff;
+    display: flex;
+    max-width: 90%;
+    margin: 3 rem auto;
+    text-align: center;
+}
