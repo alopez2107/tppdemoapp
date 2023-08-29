@@ -2,8 +2,25 @@
   padding: 1rem;
   background-color: #ffffff;
   margin: 2rem auto;
-  width: 50rem;
+  width: auto;
   max-width: 95%;
+}
+
+.dashboard-main__header {
+  padding: 1rem;
+  background-color: #74b6bb;
+  margin: 2rem auto;
+  width: 80rem;
+}
+
+.dashboard-main__header h2 {
+  display: flex;
+  padding: 1rem;
+  color: #e3daa5;
+  margin: 2rem auto;
+  width: 80rem;
+  height: 2rem;
+  align-items: center top;
 }
 
 .dashboard-main button {

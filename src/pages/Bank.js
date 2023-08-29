@@ -8,17 +8,15 @@ function Bank(props) {
   const [hasFetched, setFetched] = useState(false);
   const [accounts, dispatch] = useReducer(acctsReducer, []);
   const ctx = useContext(AuthContext);
-    const resourceUrl = ctx.resourceUrl + "/fapi/accounts";
-    const apiState = {
-      tenantID: ctx.tenantID, 
-      resourceUrl: resourceUrl, 
-      email: ctx.email,
-      hasFetched: hasFetched
-    };
+  const resourceUrl = ctx.resourceUrl + "/fapi/accounts";
+  const apiState = {
+    tenantID: ctx.tenantID, 
+    resourceUrl: resourceUrl, 
+    email: ctx.email,
+    hasFetched: hasFetched
+  };
 
   useAccountFetch(dispatch, setFetched, apiState);
-
-
 
   return ( 
     <Dashboard accounts={accounts}/>

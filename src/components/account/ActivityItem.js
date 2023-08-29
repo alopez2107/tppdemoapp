@@ -12,10 +12,11 @@ function ActivityItem(props) {
   useState(props.activity.title);
 
   function RenderContent(props) {
+    console.log(`Activity to be rendered ${JSON.stringify(props.activity)}`);
     switch(props.activity.activityType) {
-      case 1: return (<TransferItem activity={props.activity} />);
-      case 2: return (<DepositItem activity={props.activity} />);
-      case 3: return (<PaymentItem activity={props.activity} />);
+      case 'Transfer': return (<TransferItem activity={props.activity} />);
+      case 'Deposit': return (<DepositItem activity={props.activity} />);
+      case 'Payment': return (<PaymentItem activity={props.activity} />);
       default: return (<></>);
     }
   }

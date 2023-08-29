@@ -1,20 +1,49 @@
 .control-panel__main {
     display: flex;
     flex-flow: row nowrap;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem;
+    background-color: #ffffff;
+    margin: 2rem auto;
+    width: auto;
+    max-width: 95%;
+}
+
+.control-panel__main button {
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 1px solid #0000b3;
+    background-color: #00004d;
+    color: white;
+    border-radius: 12px;
+    margin-right: 1rem;
+}
+
+.control-panel__info {
+    display: flex;
+    flex-flow: column;
+    align-items: start;
     padding: 1rem;
     background-color: #ffffff;
     margin: 2rem auto;
     width: 50rem;
     max-width: 95%;
+    
 }
 
-.control-panel__button {
-    font: inherit;
-    cursor: pointer;
-    padding: 1rem 2rem;
-    border: 1px solid #40005d;
-    background-color: #40005d;
-    color: white;
-    border-radius: 12px;
-    margin-right: 1rem;
+.control-panel__info h2 {
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: #00004d;
 }
+
+.control-panel__info p {
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+}
+
+

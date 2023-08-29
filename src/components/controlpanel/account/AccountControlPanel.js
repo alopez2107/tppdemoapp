@@ -27,6 +27,16 @@ function AccountControlPanel(props) {
 
     return (
         <Card className="control-panel__main">
+            <Card className="control-panel__info">
+                <div>
+                    <h2>Customer Name</h2>
+                    <p>{ctx.userName}</p>
+                </div>
+                <div>
+                    <h2>Customer E-Mail</h2>
+                    <p>{ctx.email}</p>
+                </div>
+            </Card>
             <button onClick={onReloadAccounts}>Reload Accounts</button>
             <button onClick={onLogout}>Logout</button>
         </Card>

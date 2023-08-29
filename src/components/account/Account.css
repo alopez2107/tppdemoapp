@@ -1,4 +1,17 @@
 .account-item {
+    width: auto;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    padding: 5rem;
+    margin: 1rem 0;
+    border-radius: 6px;
+    background-color: #ffffff;
+  }
+
+  .account-subitem {
+    width: fit-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,31 +24,33 @@
 
   .account-item__details {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    flex-flow: column;
+    justify-content: center;
     align-items: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     padding: 0.5rem;
     margin: 1rem 0;
     border-radius: 6px;
     background-color: #f0f0f5;
+    width: 30rem;
   }
   
   .account-item__description {
     display: flex;
-    flex-direction: column;
+    padding: 3rem;
     gap: 1rem;
-    align-items: flex-end;
-    flex-flow: column-reverse;
-    justify-content: flex-start;
+    align-items:  center;
+    flex-flow: row nowrap;
+    justify-content: center;
     flex: 1;
+    width: 100%;
   }
 
   .account-item__body {
     color: #3d3d5c;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: small;
-    background-color: cornsilk;
+    background-color: #ffffff;
   }
   
   .account-item h2 {
@@ -54,6 +69,21 @@
     }
   
     .account-item__description h2 {
-      font-size: 1.25rem;
+      font-size: medium;
+    }
+
+    .account-item__description p {
+      font-size: small;
+    }
+
+    .account-item__description button {
+      font: inherit;
+      cursor: pointer;
+      padding: 1rem 2rem;
+      border: 1px solid #0000b3;
+      background-color: #00004d;
+      color: white;
+      border-radius: 12px;
+      margin-right: 1rem;
     }
   }

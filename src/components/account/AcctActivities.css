@@ -1,8 +1,38 @@
 .acct-activities {
-    padding: 1rem;
-    background-color: #ffffff;
-    margin: 2rem auto;
-    width: 50rem;
-    max-width: 95%;
-  }
+  display: flex;
+  flex-flow: column;
+  padding: 1rem;
+  background-color: #ffffff;
+  margin: 2rem auto;
+  width: auto;
+  max-width: 95%;
+}
+
+.acct-activities h2 {
+  color: #003399;
+  font-size: 1rem;
+  flex: 1;
+  margin: 0 1rem;
+}
+
+.acct-activities__control_panel {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 1rem;
+  background-color: #ffffff;
+  margin: 2rem auto;
+  width: auto;
+  max-width: 95%;
+}
+
+.acct-activities__control_panel button {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #0000b3;
+  background-color: #00004d;
+  color: white;
+  border-radius: 12px;
+  margin-right: 1rem;
+}
   

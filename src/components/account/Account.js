@@ -1,39 +1,42 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import "./Account.css";
 import Card from "../ui/Card";
+import { useNavigate } from "react-router-dom";
+import AuthContext from "../../context/auth-context";
 
 const Account = (props) => {
+  const navigate = useNavigate();
+  const ctx = useContext(AuthContext);
 
-  useState(props.account.title);
+  function onGetAcctActivity() {
+    console.log("Account activity is fetched here...");
+    const acctUrl = `/${ctx.tenantID}/${props.account.accountNumber}`;
+    navigate(acctUrl);
+  }
 
   function RenderContent(props) {
     console.log(`Account info: Number: ${props.account.accountNumber} Description: ${props.account.description}`);
 
     return (
       <Card className="account-item">
-        <div className="account-item__description">
-          <h2>Account Number: {props.account.accountNumber}</h2>
-          <h2>Description: {props.account.description}</h2>
+        <div className="account-item__details">
+          <h2>Account Number:</h2>
+          <p>{props.account.accountNumber}</p> 
+          <h2>Description:</h2>
+          <p>{props.account.description}</p> 
+          <h2>Account Type</h2>
+          <p>{props.account.accountType}</p>
         </div>
-        <Card className="account-item">
-          <div className="account-item__details">
-            <div className="account-item_description">
-              <h2>Account Type</h2>
-            </div>
-            <div className="account-item__body">
-              <p>{props.account.accountType}</p>
-            </div>
-          </div>
-        </Card>
+        <div className="account-item__description">
+          <button onClick={onGetAcctActivity}>Account Activity</button>
+        </div>
       </Card>
     );
   }
   
     return (
-      <div className="account-item">
-        <RenderContent account={props.account} />
-      </div>
+      <RenderContent account={props.account} />
     );
   }
   

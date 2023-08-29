@@ -1,9 +1,7 @@
-import React, {useContext, useEffect, useReducer, useState} from "react";
+import React from "react";
 import './AccountsList.css';
-import acctsReducer from "./acctsReducer";
-import useAccountFetch from "../fetch/useAccountFetch";
 import Accounts from "./Accounts";
-import AuthContext from "../../context/auth-context";
+
 
 
 const AccountsList = (props) => { 

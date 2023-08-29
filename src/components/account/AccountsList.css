@@ -8,7 +8,7 @@
 
 .accounts-list__header {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column-reverse;
     padding: 1rem;
     background-color: #e6e6e6;
     margin: 3rem auto;
