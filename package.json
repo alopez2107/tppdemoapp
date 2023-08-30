@@ -14,7 +14,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "export PORT=8443&&HTTPS=true&&SSL_CRT_FILE=./certs/tppdemo.avalpoc.com.pem.pem&&SSL_KEY_FILE=./certs/tppdemo.avalpoc.com-key.pem react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
