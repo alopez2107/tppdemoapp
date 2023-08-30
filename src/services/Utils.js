@@ -5,7 +5,7 @@ export default async function sendHTTPRequest(tenant, resourceUrl, httpMethod, d
 
     configMap.set("aisp1", {
         clientId: "TPPOpenBankingClient",
-        redirectUri: `https://tppdemo.avalpoc.com:8443/aisp1/callback`,
+        redirectUri: `https://tppdemo.encore-test.forgerock.org/aisp1/callback`,
         scope: 'openid profile email',
         serverConfig: {
             baseUrl: "https://openam-avalpoc.forgeblocks.com/am",
@@ -17,7 +17,7 @@ export default async function sendHTTPRequest(tenant, resourceUrl, httpMethod, d
   
     configMap.set("aisp2", {
         clientId: "TPPOpenBankingClient",
-        redirectUri: `https://tppdemo.avalpoc.com:8443/aisp2/callback`,
+        redirectUri: `https://tppdemo.encore-test.forgerock.org/aisp2/callback`,
         scope: 'openid profile email',
         serverConfig: {
             baseUrl: "https://openam-avalpoc2.forgeblocks.com/am",
