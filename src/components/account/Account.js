@@ -27,6 +27,8 @@ const Account = (props) => {
           <p>{props.account.description}</p> 
           <h2>Account Type</h2>
           <p>{props.account.accountType}</p>
+          <h2>Account Balance</h2>
+          <p>{props.account.balance}</p>
         </div>
         <div className="account-item__description">
           <button onClick={onGetAcctActivity}>Account Activity</button>
