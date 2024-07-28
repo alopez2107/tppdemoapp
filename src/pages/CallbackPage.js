@@ -11,22 +11,20 @@ function CallbackPage() {
     const params = useParams();
     const ctx = useContext(AuthContext);
     const configMap = new Map();
-    const resourceUrl = (params.id === 'aisp1')? "https://bntebiocatch.encore.forgerock.com":"https://avalpoc2.encore.forgerock.com";
+    const resourceUrl = (params.id === 'aisp1')? "https://avalpoc.encore.forgerock.com":"https://avalpoc2.encore.forgerock.com";
     const bankName = (params.id === 'aisp1')? "Banco de Occidente":"Banco de Bogotá";
   
 
   const codeParam = searchParams.get('code');
   const stateParam = searchParams.get('state');
 
-  console.debug(`The values for code and state are ${codeParam} and ${stateParam}`)
-
   useEffect(() => {
     configMap.set("aisp1", {
-        clientId: "jcpSupplierPortal",
+        clientId: "TPPOpenBankingClient",
         redirectUri: `http://localhost:3000/aisp1/callback`,
-        scope: 'openid profile email',
+        scope: 'openid profile email accounts',
         serverConfig: {
-            baseUrl: "https://openam-jcpsupwf.forgeblocks.com/am",
+            baseUrl: "https://openam-bcolpoc.forgeblocks.com/am",
             timeout: '5000',
         },
         realmPath: "alpha",
@@ -62,7 +60,7 @@ function CallbackPage() {
 
     async function getTokens() {
       if (codeParam && stateParam) {
-        await TokenManager.getTokens({ query: { code: codeParam, state: stateParam } });
+        await TokenManager.getTokens({ query: { codeParam, stateParam } });
       } else {
         await TokenManager.getTokens({ forceRenew: false, login: 'redirect' });
       }
@@ -76,9 +74,8 @@ function CallbackPage() {
         /**
          * Set user state/info on "global state"
          */
-        console.log(`User Entry is ${JSON.stringify(user)}`);
         ctx.setUsername(user?.name);
-        ctx.setEmail(user?.email);
+        ctx.setEmail(user.email);
         ctx.setAuthentication(true);
         ctx.setTenantID(params.id);
         ctx.setResourceUrl(resourceUrl);
