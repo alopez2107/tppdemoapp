@@ -8,7 +8,7 @@ function Bank(props) {
   const [hasFetched, setFetched] = useState(false);
   const [accounts, dispatch] = useReducer(acctsReducer, []);
   const ctx = useContext(AuthContext);
-  const resourceUrl = ctx.resourceUrl + "/fapi/accounts";
+  const resourceUrl = ctx.resourceUrl + "/fapi/consentedAccounts";
   const apiState = {
     tenantID: ctx.tenantID, 
     resourceUrl: resourceUrl, 

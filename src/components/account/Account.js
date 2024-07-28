@@ -22,13 +22,9 @@ const Account = (props) => {
       <Card className="account-item">
         <div className="account-item__details">
           <h2>Account Number:</h2>
-          <p>{props.account.accountNumber}</p> 
-          <h2>Description:</h2>
-          <p>{props.account.description}</p> 
+          <p>{props.account.acctNum}</p> 
           <h2>Account Type</h2>
-          <p>{props.account.accountType}</p>
-          <h2>Account Balance</h2>
-          <p>{props.account.balance}</p>
+          <p>{props.account.acctType}</p>
         </div>
         <div className="account-item__description">
           <button onClick={onGetAcctActivity}>Account Activity</button>

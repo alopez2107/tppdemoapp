@@ -1,0 +1,36 @@
+{
+    "result": [
+        {
+            "_id": "0e42e932-bd41-42e7-a0b9-13e1bcef96c1",
+            "_rev": "ed55f80f-e1bc-4bbd-9701-1854d504117f-5163",
+            "accountNumber": "2190877200112878",
+            "accountType": "Credit Card",
+            "associatedCustomerID": "870189704",
+            "balance": "2770.55",
+            "description": "Credit Card that gives you rewards everywhere you go.",
+            "openingDate": "08-24-2019",
+            "options": {
+                "creditLimit": 12500,
+                "dueDate": "Billing + 15",
+                "endBillingCycle": 25,
+                "interestRate": 12.6
+            }
+        },
+        {
+            "_id": "29508c2f-a8be-45a4-85eb-75aedf65b122",
+            "_rev": "ed55f80f-e1bc-4bbd-9701-1854d504117f-4903",
+            "accountNumber": "2908732189",
+            "accountType": "Checking",
+            "associatedCustomerID": "870189704",
+            "balance": "3989.67",
+            "description": "Checking Account no fees, no minimum balance",
+            "openingDate": "05-23-2019",
+            "options": {
+                "creditLimit": 0,
+                "dueDate": null,
+                "endBillingCycle": 0,
+                "interestRate": 0
+            }
+        }
+    ]
+}
