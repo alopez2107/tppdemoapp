@@ -60,7 +60,7 @@ function CallbackPage() {
 
     async function getTokens() {
       if (codeParam && stateParam) {
-        await TokenManager.getTokens({ query: { codeParam, stateParam } });
+        await TokenManager.getTokens({ query: { "code": codeParam, "state": stateParam } });
       } else {
         await TokenManager.getTokens({ forceRenew: false, login: 'redirect' });
       }
