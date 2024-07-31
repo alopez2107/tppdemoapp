@@ -6,8 +6,8 @@ export default function useAccountFetch(dispatch, setFetched, state) {
     async function getAccounts() {
         const fetchedAccounts = await sendHTTPRequest(state.tenantID, state.resourceUrl, "POST", { email: state.email });
         setFetched(true);
-        
-        dispatch({type: "init-accts", payload: {accts: fetchedAccounts.result}});
+        console.debug("Fetched Accounts {}", JSON.stringify(fetchedAccounts));
+        dispatch({type: "init-accts", payload: {accts: fetchedAccounts.accounts}});
     }
     if (!state.hasFetched) {
         getAccounts();

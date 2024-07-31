@@ -11,7 +11,7 @@ function CallbackPage() {
     const params = useParams();
     const ctx = useContext(AuthContext);
     const configMap = new Map();
-    const resourceUrl = (params.id === 'aisp1')? "https://avalpoc.encore.forgerock.com":"https://avalpoc2.encore.forgerock.com";
+    const resourceUrl = (params.id === 'aisp1')? "https://bcolpoc.encore.forgerock.com":"https://avalpoc2.encore.forgerock.com";
     const bankName = (params.id === 'aisp1')? "Banco de Occidente":"Banco de Bogotá";
   
 

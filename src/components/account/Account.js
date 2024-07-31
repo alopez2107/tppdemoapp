@@ -11,20 +11,20 @@ const Account = (props) => {
 
   function onGetAcctActivity() {
     console.log("Account activity is fetched here...");
-    const acctUrl = `/${ctx.tenantID}/${props.account.accountNumber}`;
+    const acctUrl = `/${ctx.tenantID}/${props.account.acctNumber}`;
     navigate(acctUrl);
   }
 
   function RenderContent(props) {
-    console.log(`Account info: Number: ${props.account.accountNumber} Description: ${props.account.description}`);
+    console.log(`Account info: Number: ${props.account.acctNumber} Description: ${props.account.acctName}`);
 
     return (
       <Card className="account-item">
         <div className="account-item__details">
           <h2>Account Number:</h2>
-          <p>{props.account.acctNum}</p> 
-          <h2>Account Type</h2>
-          <p>{props.account.acctType}</p>
+          <p>{props.account.acctNumber}</p> 
+          <h2>Account Name</h2>
+          <p>{props.account.acctName}</p>
         </div>
         <div className="account-item__description">
           <button onClick={onGetAcctActivity}>Account Activity</button>
